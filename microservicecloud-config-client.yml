@@ -9,10 +9,11 @@ spring:
   profiles: dev
   application:
     name: microservicecloud-config-client
+
 eureka:
   client:
     service-url:
-      defaultZone: dev  #设置与Eureka Client交互的地址查询服务和注册服务都依赖这个地址
+      defaultZone: http://eureka-dev.com:7001/eureka/  #设置与Eureka Client交互的地址查询服务和注册服务都依赖这个地址
 ---
 server:
   port: 8202
@@ -20,7 +21,8 @@ spring:
   profiles: test
   application:
     name: microservicecloud-config-client
-eureka:
+
+eureka: 
   client:
     service-url:
-      defaultZone: test  #设置与Eureka Client交互的地址查询服务和注册服务都依赖这个地址
+      defaultZone: http://eureka-test.com:7001/eureka/  #设置与Eureka Client交互的地址查询服务和注册服务都依赖这个地址
